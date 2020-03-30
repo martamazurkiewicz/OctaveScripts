@@ -16,7 +16,9 @@ clear all;
 %b = [2,12,3];
 %x = uklad_U(U,b);
 
-A = [4,-6,8;-6,10,-10;8,-10,29];
+A= [4,-1,-1,0;-1,4,0,-1;-1,0,4,-1;0,-1,-1,4];
 A
-[ L ] = Marta_Mazurkiewicz_rozklad_cholesky(A);
-L
+b = [-1,2,0,1];
+b
+[x] = Marta_Mazurkiewicz_iteracja_Jacobiego(A,b);
+x
