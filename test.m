@@ -16,9 +16,9 @@ clear all;
 %b = [2,12,3];
 %x = uklad_U(U,b);
 
-A= [4,-1,-1,0;-1,4,0,-1;-1,0,4,-1;0,-1,-1,4];
+A= [4,2,0;1,2,1;0,2,4];
 A
-b = [-1,2,0,1];
+b = [2,1,0];
 b
-[x] = Mazurkiewicz_Marta_iteracja_Jacobiego(A,b);
+[x] = Mazurkiewicz_Marta_iteracja_Seidel(A,b);
 x
