@@ -20,5 +20,5 @@ A= [4,-1,-1,0;-1,4,0,-1;-1,0,4,-1;0,-1,-1,4];
 A
 b = [-1,2,0,1];
 b
-[x] = Marta_Mazurkiewicz_iteracja_Jacobiego(A,b);
+[x] = Mazurkiewicz_Marta_iteracja_Jacobiego(A,b);
 x

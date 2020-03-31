@@ -1,4 +1,4 @@
-function[x] = Marta_Mazurkiewicz_iteracja_Jacobiego(A,b)
+function[x] = Mazurkiewicz_Marta_iteracja_Jacobiego(A,b)
 
 %1. sprawdzenie czy macierz jest diagonalnie dominujaca
 n = length(A);
