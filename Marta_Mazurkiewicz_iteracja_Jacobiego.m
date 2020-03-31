@@ -19,8 +19,11 @@ endfor
 %2. Obliczenie wektora x zalaznie od k
 x = zeros(1,n);
 if czyJestDominujaca == 1
-xk = zeros(1,n);
-for k = 1:20
+xk = 1:1:n;
+dokladnosc = 0.0000001;
+czyWarunekStopuOsiagniety = 0;
+while(czyWarunekStopuOsiagniety == 0)
+  x = xk;
   for i = 1:n
     for j = 1:n
       if j != i
@@ -30,7 +33,12 @@ for k = 1:20
     xk(i) = (b(i)-suma)/A(i,i);
     suma = 0;
   endfor
-  x = xk;
-endfor
+  czyWarunekStopuOsiagniety = 1;
+  for i = 1:n
+    if abs(x(i)-xk(i)) > dokladnosc
+      czyWarunekStopuOsiagniety = 0;
+    endif
+  endfor
+endwhile
 endif
 endfunction
