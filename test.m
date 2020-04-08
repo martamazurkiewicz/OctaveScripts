@@ -16,9 +16,8 @@ clear all;
 %b = [2,12,3];
 %x = uklad_U(U,b);
 
-A= [4,2,0;1,2,1;0,2,4];
-A
-b = [2,1,0];
-b
-[x] = Mazurkiewicz_Marta_iteracja_Seidel(A,b);
-x
+xw = [-2,1,3];
+yw = [5,-1,25];
+x = 2;
+[y] = Mazurkiewicz_Marta_Lagrange(xw,yw,x);
+y
