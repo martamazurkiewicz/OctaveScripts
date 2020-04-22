@@ -16,8 +16,8 @@ clear all;
 %b = [2,12,3];
 %x = uklad_U(U,b);
 
-xw = [-2,1,3];
-yw = [5,-1,25];
-x = 2;
-[y] = Mazurkiewicz_Marta_Lagrange(xw,yw,x);
-y
+x = [-1,0,1,2];
+y = [4,-1,0,7];
+n = 2;
+[suma] = Mazurkiewicz_Marta_MNK(x,y,n);
+suma
