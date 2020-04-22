@@ -29,10 +29,11 @@ for k = 1:n+1
   endfor;
   mnoznik = 0;
 endfor;
-%wektor y
-y = zeros(n+1,1);
+
+%wektor res -> A*a=res
+res = zeros(n+1,1);
 for i = 1:n+1
-  y(i) = sumArray(2*n+i);
+  res(i) = sumArray(2*n+i);
 endfor;
 
 %rozklad cholesky'ego
@@ -68,24 +69,33 @@ U = L';
 %[a] = uklad_U(U,x);
 
 %uklad_L
-x = zeros(1,n+1);
-x(1) = y(1)/L(1,1);
+b = zeros(1,n+1);
+b(1) = res(1)/L(1,1);
 for i = 2:n+1
-  x(i) = y(i);
+  b(i) = res(i);
   for j = 1:i-1
-    x(i) = x(i)-L(i,j)*x(j);
+    b(i) = b(i)-L(i,j)*b(j);
   endfor;
-  x(i) = x(i)/L(i,i);
+  b(i) = b(i)/L(i,i);
 endfor;
 
 %uklad U
 a = zeros(1,n+1);
-a(n+1) = x(n+1)/U(n+1,n+1);
+a(n+1) = b(n+1)/U(n+1,n+1);
 for i = n:-1:1
-  a(i) = x(i);
+  a(i) = b(i);
   for j = n+1:-1:i+1
     a(i) = a(i)-U(i,j)*a(j);
   endfor;
   a(i) = a(i)/U(i,i);
 endfor;
+
+args = x(1)-1:0.1:x(length(x))+1;
+func = 0;
+for i = 1:n+1
+  func = func + a(i)*args.^(i-1);
+endfor;
+plot (args,func,x,y,'*');
+xlabel("x");
+ylabel("Wielomian");
 endfunction;
