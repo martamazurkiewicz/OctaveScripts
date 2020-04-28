@@ -90,12 +90,5 @@ for i = n:-1:1
   a(i) = a(i)/U(i,i);
 endfor;
 
-args = x(1)-1:0.1:x(length(x))+1;
-func = 0;
-for i = 1:n+1
-  func = func + a(i)*args.^(i-1);
-endfor;
-plot (args,func,x,y,'*');
-xlabel("x");
-ylabel("Wielomian");
+
 endfunction;

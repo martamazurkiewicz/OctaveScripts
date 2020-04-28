@@ -19,8 +19,9 @@ clear all;
 %x = [-1,0,1,2];
 %y = [4,-1,0,7];
 %n = 2;
-x = [-1,2,5];
-y = [5,-4,-13];
-n = 1;
-[suma] = Mazurkiewicz_Marta_MNK(x,y,n);
-suma
+%x = [-1,2,5];
+%y = [5,-4,-13];
+%n = 1;
+%[suma] = Mazurkiewicz_Marta_MNK(x,y,n);
+[a] = Mazurkiewicz_Marta_Efekt_Runge(4);
+%suma
