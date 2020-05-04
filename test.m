@@ -23,6 +23,7 @@ clear all;
 %y = [5,-4,-13];
 %n = 1;
 %[suma] = Mazurkiewicz_Marta_MNK(x,y,n);
-[a] = Mazurkiewicz_Marta_bisekcja(0,11,0.000001,@(x)(x^2-11));
+%[a] = Mazurkiewicz_Marta_styczne(1,0.000001,@(x)(2*x^2-4*x+2));
+[a] = Mazurkiewicz_Marta_styczne(-pi/4,0.000001,@sin);
 a
 %suma
