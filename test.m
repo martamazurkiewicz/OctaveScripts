@@ -23,5 +23,6 @@ clear all;
 %y = [5,-4,-13];
 %n = 1;
 %[suma] = Mazurkiewicz_Marta_MNK(x,y,n);
-[a] = Mazurkiewicz_Marta_Efekt_Runge(4);
+[a] = Mazurkiewicz_Marta_bisekcja(0,11,0.000001,@(x)(x^2-11));
+a
 %suma
