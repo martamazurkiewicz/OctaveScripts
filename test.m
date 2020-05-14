@@ -26,6 +26,6 @@ clear all;
 %[a] = Mazurkiewicz_Marta_styczne(1,0.000001,@(x)(2*x^2-4*x+2));
 %[a] = Mazurkiewicz_Marta_styczne(-pi/4,0.000001,@sin);
 %[a] =Mazurkiewicz_Marta_sieczne(2,1,0.000001,@(x)(x^3-2*x^2-2));
-[a] =Mazurkiewicz_Marta_sieczne(-pi/2,-pi/4,0.000001,@sin);
+[a] = Mazurkiewicz_Marta_Newton_wielowymiarowy(0.001);
 a
 %suma
