@@ -6,7 +6,8 @@ x(1) = a;
 for(i=2:n+1)
 x(i) = x(i-1)+h;
 endfor
-suma = 0;for(i=1:n)
+suma = 0;
+for(i=1:n)
 trapez = (func(x(i))+func(x(i+1)))*h/2;
 suma = suma+trapez; 
 endfor
