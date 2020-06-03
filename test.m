@@ -26,6 +26,11 @@ clear all;
 %[a] = Mazurkiewicz_Marta_styczne(1,0.000001,@(x)(2*x^2-4*x+2));
 %[a] = Mazurkiewicz_Marta_styczne(-pi/4,0.000001,@sin);
 %[a] =Mazurkiewicz_Marta_sieczne(2,1,0.000001,@(x)(x^3-2*x^2-2));
-[a] = Mazurkiewicz_Marta_Pole_kola(3,1000)
-a
-%suma
+
+% V w kolumnach wektory wlasne
+%przykladowa macierz
+A  = [2, -3, 2; -3, -4, -2; 1, -2, 4];
+eig(A)
+b = [1;1;1];
+%poly(A)
+[x] = Mazurkiewicz_Marta_metoda_potegowa(A,b,0.10)
