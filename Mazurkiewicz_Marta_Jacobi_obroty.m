@@ -1,7 +1,7 @@
 function x = Mazurkiewicz_Marta_Jacobi_obroty(A, eps)
 n = length(A);
 warunek = 2*eps;
-while warunek > eps
+while (warunek > eps)
   warunek = 0;
   p = 0;
   q = 0;
@@ -9,7 +9,7 @@ while warunek > eps
   for (i=1:n)
     for (j=1:n)
       if (i != j)
-        warunek += abs(A(i,j));
+        warunek = warunek + abs(A(i,j));
         if (abs(A(i,j)) > max)
           max = abs(A(i,j));
           p = j;
